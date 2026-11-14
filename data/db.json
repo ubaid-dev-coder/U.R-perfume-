@@ -1,0 +1,393 @@
+{
+  "products": [
+    {
+      "id": "gucci-flora-inspired",
+      "name": "Gucci Flora Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Luminous White Gardenia, Pear Blossom & Warm Sugar",
+      "inspiredBy": "Gucci Flora Gorgeous Gardenia",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (High Oil Concentration)",
+      "price": 1700,
+      "originalPrice": 2300,
+      "stock": 64,
+      "image": "/assets/aistudio/image_bb39909f.png",
+      "flaconDetails": {
+        "liquidGradient": "from-amber-200/90 via-rose-300/80 to-amber-100/90",
+        "capColor": "from-[#fceda2] via-[#d4af37] to-[#aa820a]",
+        "labelBadge": "FLORAL EDITION",
+        "accentGlow": "rgba(244, 212, 124, 0.4)"
+      },
+      "description": "Inspired by Gucci Flora Gorgeous Gardenia, this U.R PERFUMES blend opens with fresh pear blossom and Italian mandarin before settling into white gardenia petals, brown sugar, and smooth woods. Light, floral, and suited for daily wear and daytime events.",
+      "topNotes": [
+        "Pear Blossom",
+        "Italian Mandarin",
+        "Red Berries"
+      ],
+      "heartNotes": [
+        "White Gardenia",
+        "Jasmine",
+        "Frangipani"
+      ],
+      "baseNotes": [
+        "Brown Sugar",
+        "Patchouli",
+        "Warm Woods"
+      ],
+      "longevity": "10 – 14 Hours",
+      "sillage": "Moderate to Strong Floral Trail",
+      "gender": "Women",
+      "bestSeason": "Spring, Summer, Daytime & Weddings",
+      "category": "Floral & Gardenia",
+      "status": "Active",
+      "isBestSeller": true,
+      "isFeatured": true,
+      "rating": 4.9,
+      "reviewCount": 168
+    },
+    {
+      "id": "black-opium-inspired",
+      "name": "Black Opium Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Roasted Espresso, Warm Vanilla & White Petals",
+      "inspiredBy": "Yves Saint Laurent Black Opium",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (Evening Projection)",
+      "price": 1800,
+      "originalPrice": 2400,
+      "stock": 50,
+      "image": "/assets/aistudio/image_f7eac110.png",
+      "flaconDetails": {
+        "liquidGradient": "from-amber-800/95 via-stone-900/95 to-amber-700/90",
+        "capColor": "from-zinc-200 via-zinc-400 to-zinc-700",
+        "labelBadge": "EVENING GOURMAND",
+        "accentGlow": "rgba(217, 119, 6, 0.45)"
+      },
+      "description": "Inspired by YSL Black Opium. Opens with roasted coffee beans and pink pepper, followed by orange blossom and smooth vanilla on a warm cedar base. Sweet, warm, and built for evenings out.",
+      "topNotes": [
+        "Black Espresso",
+        "Pink Pepper",
+        "Nashi Pear"
+      ],
+      "heartNotes": [
+        "Orange Blossom",
+        "Bitter Almond",
+        "Jasmine"
+      ],
+      "baseNotes": [
+        "Bourbon Vanilla",
+        "Cedarwood",
+        "White Musk"
+      ],
+      "longevity": "12 – 16 Hours on Fabric",
+      "sillage": "Strong Evening Projection",
+      "gender": "Women",
+      "bestSeason": "Autumn, Winter & Evenings",
+      "category": "Gourmand & Vanilla",
+      "status": "Active",
+      "isBestSeller": true,
+      "isFeatured": true,
+      "rating": 5,
+      "reviewCount": 215
+    },
+    {
+      "id": "janan-sports-inspired",
+      "name": "Janan Gold Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Golden Amber, Calabrian Bergamot & Clean Spices",
+      "inspiredBy": "J. Janan Gold",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (All-Day Formula)",
+      "price": 1500,
+      "originalPrice": 1800,
+      "stock": 75,
+      "image": "/assets/aistudio/janan_gold_bottle.jpg",
+      "flaconDetails": {
+        "liquidGradient": "from-amber-300/85 via-yellow-500/85 to-amber-700/90",
+        "capColor": "from-[#fceda2] via-[#d4af37] to-[#aa820a]",
+        "labelBadge": "SIGNATURE GOLD",
+        "accentGlow": "rgba(212, 175, 55, 0.5)"
+      },
+      "description": "Inspired by Janan Gold. Combines crisp bergamot and red apple with subtle nutmeg, patchouli, golden amber, and white musk. Versatile for daily office wear, dinners, and formal events.",
+      "topNotes": [
+        "Bergamot",
+        "Red Apple",
+        "Black Pepper"
+      ],
+      "heartNotes": [
+        "Nutmeg & Clove",
+        "Patchouli",
+        "Violet Leaf"
+      ],
+      "baseNotes": [
+        "Golden Amber",
+        "White Musk",
+        "Cedarwood"
+      ],
+      "longevity": "12 – 16 Hours",
+      "sillage": "Balanced & Long-Lasting",
+      "gender": "Men",
+      "bestSeason": "All-Year, Weddings & Office",
+      "category": "Fresh & Citrus Amber",
+      "status": "Active",
+      "isBestSeller": true,
+      "isFeatured": true,
+      "rating": 4.9,
+      "reviewCount": 204
+    },
+    {
+      "id": "amir-alud-inspired",
+      "name": "Amir Al Oud Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Smoky Agarwood, Caramelized Sugar & Warm Resins",
+      "inspiredBy": "Lattafa Amir Al Oudh Intense Oud",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (Concentrated Oud)",
+      "price": 1700,
+      "originalPrice": 2000,
+      "stock": 40,
+      "image": "/assets/aistudio/image_82981bf4.png",
+      "flaconDetails": {
+        "liquidGradient": "from-amber-600/90 via-yellow-700/90 to-amber-950/95",
+        "capColor": "from-[#fceda2] via-[#d4af37] to-[#785b00]",
+        "labelBadge": "ORIENTAL OUD",
+        "accentGlow": "rgba(212, 175, 55, 0.5)"
+      },
+      "description": "Inspired by Ameer Al Oudh Intense. Rich Cambodian agarwood layered with roasted vanilla sugar, labdanum resin, and amber. Deep, smoky, and ideal for cooler weather and formal gatherings.",
+      "topNotes": [
+        "Aged Oud",
+        "Warm Thyme",
+        "Honeycomb"
+      ],
+      "heartNotes": [
+        "Vanilla Sugar",
+        "Guaiac Wood",
+        "Labdanum"
+      ],
+      "baseNotes": [
+        "Dark Agarwood",
+        "Ambergris",
+        "Benzoin"
+      ],
+      "longevity": "14 – 18+ Hours",
+      "sillage": "Heavy Oriental Projection",
+      "gender": "Unisex",
+      "bestSeason": "Autumn, Winter & Formal Events",
+      "category": "Imperial Agarwood & Oud",
+      "status": "Active",
+      "isBestSeller": true,
+      "isFeatured": true,
+      "rating": 5,
+      "reviewCount": 247
+    },
+    {
+      "id": "azzaro-wanted-inspired",
+      "name": "Azzaro Wanted Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Crushed Ginger, Cardamom & Earthy Vetiver",
+      "inspiredBy": "Azzaro Wanted by Night",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (Spiced Woody)",
+      "price": 1700,
+      "originalPrice": 2200,
+      "stock": 55,
+      "image": "/assets/aistudio/image_9222a07a.png",
+      "flaconDetails": {
+        "liquidGradient": "from-amber-500/85 via-orange-600/85 to-amber-900/90",
+        "capColor": "from-zinc-300 via-zinc-500 to-zinc-800",
+        "labelBadge": "SPICY CITRUS WOODY",
+        "accentGlow": "rgba(245, 158, 11, 0.4)"
+      },
+      "description": "Inspired by Azzaro Wanted. Opens crisp with lemon, fresh ginger, and lavender before moving into green cardamom, tonka bean, and dry Haitian vetiver. Energetic and confident for evenings and events.",
+      "topNotes": [
+        "Calabrian Lemon",
+        "Fresh Ginger",
+        "Lavender"
+      ],
+      "heartNotes": [
+        "Green Cardamom",
+        "Crisp Apple",
+        "Geranium"
+      ],
+      "baseNotes": [
+        "Haitian Vetiver",
+        "Tonka Bean",
+        "Amberwood"
+      ],
+      "longevity": "11 – 14 Hours",
+      "sillage": "Strong Spiced Trail",
+      "gender": "Men",
+      "bestSeason": "Spring, Autumn & Evening Events",
+      "category": "Spicy & Woody Citrus",
+      "status": "Active",
+      "isBestSeller": false,
+      "isFeatured": true,
+      "rating": 4.9,
+      "reviewCount": 132
+    },
+    {
+      "id": "invictus-inspired",
+      "name": "Invictus Inspired – 30ml",
+      "brand": "U.R PERFUMES",
+      "tagline": "Crisp Marine Freshness, Bay Leaf & Ambergris",
+      "inspiredBy": "Paco Rabanne Invictus",
+      "size": "30ml",
+      "concentration": "Extrait de Parfum (Fresh Aquatic)",
+      "price": 1700,
+      "originalPrice": 2200,
+      "stock": 60,
+      "image": "/assets/aistudio/image_d9d5f189.png",
+      "flaconDetails": {
+        "liquidGradient": "from-emerald-400/80 via-emerald-700/85 to-zinc-900/95",
+        "capColor": "from-zinc-200 via-zinc-400 to-zinc-800",
+        "labelBadge": "FRESH AQUATIC",
+        "accentGlow": "rgba(16, 185, 129, 0.4)"
+      },
+      "description": "Inspired by Paco Rabanne Invictus. Clean sea spray and grapefruit notes paired with aromatic bay leaf, jasmine, and warm guaiac wood. Fresh and dependable in Pakistani summers.",
+      "topNotes": [
+        "Sea Spray",
+        "Grapefruit",
+        "Mandarin Peel"
+      ],
+      "heartNotes": [
+        "Bay Leaf",
+        "Jasmine",
+        "Fresh Mint"
+      ],
+      "baseNotes": [
+        "Ambergris",
+        "Guaiac Wood",
+        "Oakmoss"
+      ],
+      "longevity": "12 – 15 Hours",
+      "sillage": "Clean, Steady Projection",
+      "gender": "Men",
+      "bestSeason": "Spring, Summer & Daytime Wear",
+      "category": "Fresh & Citrus Amber",
+      "status": "Active",
+      "isBestSeller": true,
+      "isFeatured": true,
+      "rating": 4.9,
+      "reviewCount": 156
+    }
+  ],
+  "orders": [
+    {
+      "storeId": "ur-flagship-karachi",
+      "storeName": "U.R PERFUMES – Karachi Flagship",
+      "customer": {
+        "fullName": "Ubaid Khatri",
+        "mobileNumber": "086767676767",
+        "whatsappNumber": "086767676767",
+        "address": "44/9",
+        "city": "Karachi"
+      },
+      "items": [
+        {
+          "productId": "gucci-flora-inspired",
+          "productName": "Gucci Flora Inspired – 30ml",
+          "size": "30ml",
+          "price": 1700,
+          "quantity": 1,
+          "image": "/assets/aistudio/image_bb39909f.png"
+        }
+      ],
+      "subtotal": 1700,
+      "deliveryCharges": 200,
+      "totalAmount": 1900,
+      "paymentMethod": "Cash on Delivery (COD)",
+      "id": "UR-54006",
+      "createdAt": "2026-11-14T10:15:58.745Z",
+      "status": "Pending",
+      "whatsappConfirmed": false
+    }
+  ],
+  "settings": {
+    "officialWhatsapp": "+923390108748",
+    "deliveryCharge": 200,
+    "freeDeliveryThreshold": 3500,
+    "storePhone": "+92 339 0108748",
+    "storeEmail": "contact@urperfumes.pk",
+    "storeAddress": "11F New Karachi, Karachi, Pakistan (Nationwide Fast Shipping)",
+    "announcementBanner": "Free Delivery on Orders Over Rs. 3,500 · Cash on Delivery Nationwide · Direct WhatsApp Order Confirmation",
+    "adminPassword": "urperfumes2026",
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/ur.perfumes.official/",
+      "facebook": "https://facebook.com/urperfumes.official",
+      "whatsapp": "https://wa.me/923390108748"
+    }
+  },
+  "stores": [
+    {
+      "id": "ur-flagship-karachi",
+      "name": "U.R PERFUMES – Karachi Flagship",
+      "logo": "/assets/aistudio/image_6fedb4b4.png",
+      "address": "11F New Karachi, Karachi, Pakistan",
+      "phone": "+92 339 0108748",
+      "whatsapp": "+923390108748",
+      "email": "contact@urperfumes.pk",
+      "description": "Flagship branch and nationwide dispatch center of U.R PERFUMES for 30ml Extrait de Parfum fragrances.",
+      "managerName": "Ubaid Khatri",
+      "openingHours": "Mon – Sun: 11:00 AM – 11:00 PM",
+      "status": "Active",
+      "isDefault": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "storeProducts": [
+    {
+      "id": "sp-ur-flagship-karachi-gucci-flora-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "gucci-flora-inspired",
+      "storePrice": 1700,
+      "stock": 64,
+      "isAvailable": true,
+      "updatedAt": "2026-11-14T10:15:58.757Z"
+    },
+    {
+      "id": "sp-ur-flagship-karachi-black-opium-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "black-opium-inspired",
+      "storePrice": 1800,
+      "stock": 50,
+      "isAvailable": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "sp-ur-flagship-karachi-janan-sports-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "janan-sports-inspired",
+      "storePrice": 1500,
+      "stock": 75,
+      "isAvailable": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "sp-ur-flagship-karachi-amir-alud-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "amir-alud-inspired",
+      "storePrice": 1700,
+      "stock": 40,
+      "isAvailable": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "sp-ur-flagship-karachi-azzaro-wanted-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "azzaro-wanted-inspired",
+      "storePrice": 1700,
+      "stock": 55,
+      "isAvailable": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "sp-ur-flagship-karachi-invictus-inspired",
+      "storeId": "ur-flagship-karachi",
+      "productId": "invictus-inspired",
+      "storePrice": 1700,
+      "stock": 60,
+      "isAvailable": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}
