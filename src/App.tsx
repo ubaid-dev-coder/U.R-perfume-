@@ -3,7 +3,6 @@ import { CartProvider, useCart } from './context/CartContext';
 import { StoreService } from './services/storeService';
 import { Product, StoreSettings, StoreProductAssignment } from './types';
 import { Navbar } from './components/Navbar';
-import { BrandLineupBanner } from './components/BrandLineupBanner';
 import { StoreSelectorSection } from './components/StoreSelectorSection';
 import { FeaturedProducts } from './components/FeaturedProducts';
 import { CollectionsSection } from './components/CollectionsSection';
@@ -189,12 +188,6 @@ function MainStoreContent() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* 0. Silver Crest Fragrance Lineup Showcase */}
-        <BrandLineupBanner
-          onShopNow={() => handleNavigate('shop')}
-          onExploreCollections={() => handleNavigate('collections')}
-        />
-
         {/* 1. Multi-Store Boutique Selector (when active stores exist) */}
         <StoreSelectorSection
           products={products}

@@ -25,7 +25,7 @@ export const CollectionsSection: React.FC<CollectionsSectionProps> = ({
       subtitle: 'Calabrian Bergamot, Marine Ambergris & Spices',
       description:
         'Crisp bergamot, bay leaf, and spiced vetiver blends built for office hours, warm weather, and daily confidence.',
-      productIds: ['janan-sports-inspired', 'azzaro-wanted-inspired', 'invictus-inspired'],
+      productIds: ['janan-sports-inspired', 'janan-spot-inspired', 'azzaro-wanted-inspired', 'invictus-inspired'],
     },
     {
       title: 'Oud & Oriental',
@@ -40,6 +40,7 @@ export const CollectionsSection: React.FC<CollectionsSectionProps> = ({
     'gucci-flora-inspired',
     'black-opium-inspired',
     'janan-sports-inspired',
+    'janan-spot-inspired',
     'amir-alud-inspired',
     'azzaro-wanted-inspired',
     'invictus-inspired',

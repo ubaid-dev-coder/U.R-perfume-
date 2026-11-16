@@ -114,6 +114,7 @@ export const Footer: React.FC<FooterProps> = ({
             <li>4. Amir Al Oud Inspired</li>
             <li>5. Azzaro Wanted Inspired</li>
             <li>6. Invictus Inspired</li>
+            <li>7. Janan Sports Inspired</li>
           </ul>
         </div>
 

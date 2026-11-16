@@ -21,6 +21,10 @@ const STORES_KEY = 'ur_perfumes_stores_v1';
 const STORE_PRODUCTS_KEY = 'ur_perfumes_store_products_v1';
 
 const INVICTUS_SEED_FLAG = 'ur_invictus_seeded_v1';
+const JANAN_SPOT_SEED_FLAG = 'ur_janan_spot_seeded_v1';
+const JANAN_SPOT_SP_SEED_FLAG = 'ur_janan_spot_sp_seeded_v1';
+const JANAN_SPORTS_1600_FLAG = 'ur_janan_sports_1600_v1';
+const JANAN_SPORTS_SP_1600_FLAG = 'ur_janan_sports_sp_1600_v1';
 
 export class StoreService {
   // =========================================================
@@ -33,22 +37,66 @@ export class StoreService {
   }
 
   private static mergeWithInitial(products: Product[]): Product[] {
+    const LEGACY_REPLACED_IMAGES = new Set([
+      '/assets/aistudio/image_bb39909f.png',
+      '/assets/aistudio/image_82981bf4.png',
+      '/assets/aistudio/image_d9d5f189.png',
+      '/assets/aistudio/image_f7eac110.png',
+      '/assets/aistudio/janan_gold_bottle.jpg',
+      '/assets/aistudio/image_9222a07a.png',
+      '/assets/aistudio/image_e4aa6d4a.png',
+    ]);
+
+    let changed = false;
     let list = products.map((item) => {
       const initialMatch = INITIAL_PRODUCTS.find((p) => p.id === item.id);
-      if (initialMatch && (!item.image || item.image.trim() === '')) {
+      if (
+        initialMatch &&
+        (!item.image || item.image.trim() === '' || LEGACY_REPLACED_IMAGES.has(item.image))
+      ) {
+        if (item.image !== initialMatch.image) {
+          changed = true;
+        }
         return { ...item, image: initialMatch.image };
       }
       return item;
     });
 
-    // One-time seed for newly added Invictus signature bottle
-    if (typeof window !== 'undefined' && !localStorage.getItem(INVICTUS_SEED_FLAG)) {
-      const invictusInit = INITIAL_PRODUCTS.find((p) => p.id === 'invictus-inspired');
-      if (invictusInit && !list.some((p) => p.id === 'invictus-inspired')) {
-        list = [...list, invictusInit];
+    if (typeof window !== 'undefined') {
+      // One-time seed for newly added Invictus signature bottle
+      if (!localStorage.getItem(INVICTUS_SEED_FLAG)) {
+        const invictusInit = INITIAL_PRODUCTS.find((p) => p.id === 'invictus-inspired');
+        if (invictusInit && !list.some((p) => p.id === 'invictus-inspired')) {
+          list = [...list, invictusInit];
+          changed = true;
+        }
+        localStorage.setItem(INVICTUS_SEED_FLAG, 'true');
+      }
+
+      // One-time seed for newly added Janan Spot signature bottle
+      if (!localStorage.getItem(JANAN_SPOT_SEED_FLAG)) {
+        const jananSpotInit = INITIAL_PRODUCTS.find((p) => p.id === 'janan-spot-inspired');
+        if (jananSpotInit && !list.some((p) => p.id === 'janan-spot-inspired')) {
+          list = [...list, jananSpotInit];
+          changed = true;
+        }
+        localStorage.setItem(JANAN_SPOT_SEED_FLAG, 'true');
+      }
+
+      // One-time sync for Janan Sports name & Rs. 1,600 price update
+      if (!localStorage.getItem(JANAN_SPORTS_1600_FLAG)) {
+        list = list.map((p) =>
+          p.id === 'janan-spot-inspired'
+            ? { ...p, name: 'Janan Sports Inspired – 30ml', price: 1600, originalPrice: 2000 }
+            : p
+        );
+        changed = true;
+        localStorage.setItem(JANAN_SPORTS_1600_FLAG, 'true');
+      }
+
+      if (changed) {
         localStorage.setItem(PRODUCTS_KEY, JSON.stringify(list));
       }
-      localStorage.setItem(INVICTUS_SEED_FLAG, 'true');
     }
 
     return list;
@@ -356,28 +404,66 @@ export class StoreService {
   // =========================================================
   // STORE PRODUCT & INVENTORY MANAGEMENT
   // =========================================================
+  private static mergeStoreProducts(list: StoreProductAssignment[]): StoreProductAssignment[] {
+    let updated = [...list];
+    let changed = false;
+
+    if (typeof window !== 'undefined') {
+      if (!localStorage.getItem('ur_invictus_sp_seeded_v1')) {
+        const invictusSp = INITIAL_STORE_PRODUCTS.find(
+          (sp) => sp.productId === 'invictus-inspired'
+        );
+        if (
+          invictusSp &&
+          !updated.some(
+            (sp) => sp.storeId === invictusSp.storeId && sp.productId === invictusSp.productId
+          )
+        ) {
+          updated = [...updated, invictusSp];
+          changed = true;
+        }
+        localStorage.setItem('ur_invictus_sp_seeded_v1', 'true');
+      }
+
+      if (!localStorage.getItem(JANAN_SPOT_SP_SEED_FLAG)) {
+        const jananSpotSp = INITIAL_STORE_PRODUCTS.find(
+          (sp) => sp.productId === 'janan-spot-inspired'
+        );
+        if (
+          jananSpotSp &&
+          !updated.some(
+            (sp) => sp.storeId === jananSpotSp.storeId && sp.productId === jananSpotSp.productId
+          )
+        ) {
+          updated = [...updated, jananSpotSp];
+          changed = true;
+        }
+        localStorage.setItem(JANAN_SPOT_SP_SEED_FLAG, 'true');
+      }
+
+      if (!localStorage.getItem(JANAN_SPORTS_SP_1600_FLAG)) {
+        updated = updated.map((sp) =>
+          sp.productId === 'janan-spot-inspired' ? { ...sp, storePrice: 1600 } : sp
+        );
+        changed = true;
+        localStorage.setItem(JANAN_SPORTS_SP_1600_FLAG, 'true');
+      }
+
+      if (changed) {
+        localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(updated));
+      }
+    }
+
+    return updated;
+  }
+
   static getStoreProducts(): StoreProductAssignment[] {
     try {
       const stored = localStorage.getItem(STORE_PRODUCTS_KEY);
       if (stored) {
-        let parsed: StoreProductAssignment[] = JSON.parse(stored);
+        const parsed: StoreProductAssignment[] = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          if (typeof window !== 'undefined' && !localStorage.getItem('ur_invictus_sp_seeded_v1')) {
-            const invictusSp = INITIAL_STORE_PRODUCTS.find(
-              (sp) => sp.productId === 'invictus-inspired'
-            );
-            if (
-              invictusSp &&
-              !parsed.some(
-                (sp) => sp.storeId === invictusSp.storeId && sp.productId === invictusSp.productId
-              )
-            ) {
-              parsed = [...parsed, invictusSp];
-              localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(parsed));
-            }
-            localStorage.setItem('ur_invictus_sp_seeded_v1', 'true');
-          }
-          return parsed;
+          return this.mergeStoreProducts(parsed);
         }
       }
     } catch (e) {
@@ -394,9 +480,10 @@ export class StoreService {
       try {
         const result = await SupabaseService.fetchStoreProducts(settings);
         if (result.success && result.data) {
-          localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(result.data));
-          this.broadcast('ur_store_products_updated', result.data);
-          return result.data;
+          const merged = this.mergeStoreProducts(result.data);
+          localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(merged));
+          this.broadcast('ur_store_products_updated', merged);
+          return merged;
         }
       } catch (err) {
         console.warn('Supabase storeProducts load notice:', err);
@@ -408,9 +495,10 @@ export class StoreService {
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data)) {
-          localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(data));
-          this.broadcast('ur_store_products_updated', data);
-          return data;
+          const merged = this.mergeStoreProducts(data);
+          localStorage.setItem(STORE_PRODUCTS_KEY, JSON.stringify(merged));
+          this.broadcast('ur_store_products_updated', merged);
+          return merged;
         }
       }
     } catch (err) {

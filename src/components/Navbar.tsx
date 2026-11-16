@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { RoyalCrownLogo } from './RoyalCrownLogo';
 import { useCart } from '../context/CartContext';
-import { ShoppingBag, Menu, X } from 'lucide-react';
-import urBannerClean from '../assets/images/ur_perfumes_banner_clean_1794649471277.jpg';
+import { ShoppingBag, Menu, X, Instagram } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface NavbarProps {
   activeSection: string;
@@ -13,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   onNavigate,
 }) => {
-  const { totalItemCount, openCart } = useCart();
+  const { totalItemCount, openCart, settings } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -28,6 +28,11 @@ export const Navbar: React.FC<NavbarProps> = ({
     onNavigate(id);
     setMobileMenuOpen(false);
   };
+
+  const whatsappDisplay = '+92 339 0108748';
+  const whatsappLink = 'https://wa.me/923390108748';
+  const instagramUrl =
+    settings.socialLinks?.instagram || 'https://www.instagram.com/ur.perfumes.official/';
 
   return (
     <>
@@ -104,23 +109,51 @@ export const Navbar: React.FC<NavbarProps> = ({
       </header>
 
       {/* Brand Showcase Banner */}
-      <div
-        onClick={() => handleNavClick('shop')}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') handleNavClick('shop');
-        }}
-        title="Explore U.R PERFUMES Collection"
-        className="w-full bg-black border-b border-zinc-800/90 cursor-pointer group overflow-hidden"
-      >
-        <div className="w-full max-w-[1440px] mx-auto relative">
-          <img
-            src={urBannerClean}
-            alt="Welcome to U.R PERFUMES - Limited Edition Fragrances"
-            referrerPolicy="no-referrer"
-            className="w-full h-auto block group-hover:brightness-105 transition-all duration-300"
-          />
+      <div className="w-full bg-black border-b border-zinc-800/90 overflow-hidden">
+        <div className="w-full max-w-[1440px] mx-auto">
+          {/* Cropped just above the embedded old footer number strip so only the crisp hero visual & Shop Now show */}
+          <div
+            onClick={() => handleNavClick('shop')}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') handleNavClick('shop');
+            }}
+            title="Explore U.R PERFUMES Collection"
+            className="w-full aspect-[1672/892] overflow-hidden cursor-pointer group bg-black"
+          >
+            <img
+              src="/assets/aistudio/image_52ecb895.png"
+              alt="U.R PERFUMES Fragrance Beyond Time - Signature Collection"
+              referrerPolicy="no-referrer"
+              className="w-full h-auto block object-cover object-top group-hover:brightness-105 transition-all duration-300"
+            />
+          </div>
+
+          {/* Crisp Live Contact Strip with Updated WhatsApp Number */}
+          <div className="bg-black border-t border-[#d4af37]/35 px-4 py-2.5 flex flex-wrap items-center justify-center gap-x-6 gap-y-1.5 text-xs sm:text-sm font-sans text-zinc-200">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-[#25D366] transition-colors font-medium tabular-nums"
+            >
+              <WhatsAppIcon className="w-4 h-4 text-[#25D366] shrink-0" />
+              <span>{whatsappDisplay}</span>
+            </a>
+
+            <span className="text-zinc-700 hidden sm:inline">|</span>
+
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-[#d4af37] transition-colors font-medium"
+            >
+              <Instagram className="w-4 h-4 text-[#d4af37] shrink-0" />
+              <span>ur.perfumes.official</span>
+            </a>
+          </div>
         </div>
       </div>
     </>

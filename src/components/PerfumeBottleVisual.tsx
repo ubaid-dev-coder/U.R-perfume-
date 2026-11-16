@@ -26,13 +26,13 @@ export const PerfumeBottleVisual: React.FC<PerfumeBottleVisualProps> = ({
   if (hasUploadedImage) {
     return (
       <div
-        className={`relative w-full ${heightClasses[size]} overflow-hidden bg-[#0c0c0e] flex flex-col items-center justify-center p-4 group ${className}`}
+        className={`relative w-full ${heightClasses[size]} overflow-hidden bg-[#0c0c0e] flex flex-col items-center justify-center p-2 group ${className}`}
       >
         <div className="relative z-10 w-full h-full flex items-center justify-center">
           <img
             src={product.image}
             alt={product.name}
-            className={`w-full h-full object-contain transition-transform duration-300 ${
+            className={`w-full h-full object-contain rounded-md transition-transform duration-300 ${
               interactive ? 'group-hover:scale-[1.02]' : ''
             }`}
             loading="lazy"
